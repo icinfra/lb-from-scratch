@@ -12,7 +12,8 @@ component itself I created an image locally by running
 an `ubuntu` container and adding dependencies so that it can compile the eBPF code: 
 
 ```bash
-sudo apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make
+sudo apt update
+sudo apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make linux-oem-5.6-tools-common linux-tools-generic linux-tools-5.4.0-42-generic
 ```
 
 Save this image off with `docker commit <running container> ubuntu-working`.
