@@ -13,7 +13,8 @@ an `ubuntu` container and adding dependencies so that it can compile the eBPF co
 
 ```bash
 sudo apt update
-sudo apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make linux-oem-5.6-tools-common linux-tools-generic linux-tools-5.4.0-42-generic
+sudo apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make 
+sudo apt install linux-oem-5.6-tools-common linux-tools-generic linux-tools-5.4.0-42-generic
 ```
 
 Save this image off with `docker commit <running container> ubuntu-working`.
