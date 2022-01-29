@@ -50,3 +50,6 @@ The IP addresses for the client, load balancer and two backends are hard-coded a
 ## BPF Trace Output
 
 On docker host, watch /sys/kernel/debug/tracing/trace_pipe file.
+```bash
+tail -f /sys/kernel/debug/tracing/trace_pipe
+```
