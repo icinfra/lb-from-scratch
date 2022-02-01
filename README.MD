@@ -16,7 +16,7 @@ apt update
 apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make 
 apt install linux-tools-generic
 ```
-You will see this message like below,
+You may see message like below,
 ```bash
 root@lb:/lb-from-scratch# make
 bpftool net detach xdpgeneric dev eth0
