@@ -12,9 +12,28 @@ component itself I created an image locally by running
 an `ubuntu` container and adding dependencies so that it can compile the eBPF code: 
 
 ```bash
-sudo apt update
-sudo apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make 
-sudo apt install linux-oem-5.6-tools-common linux-tools-generic linux-tools-5.4.0-42-generic
+apt update
+apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make 
+apt install linux-tools-generic
+```
+You will see this message like below,
+```bash
+root@lb:/lb-from-scratch# make
+bpftool net detach xdpgeneric dev eth0
+WARNING: bpftool not found for kernel 5.4.0-90
+
+  You may need to install the following packages for this specific kernel:
+    linux-tools-5.4.0-90-generic
+    linux-cloud-tools-5.4.0-90-generic
+
+  You may also want to install one of the following packages to keep up to date:
+    linux-tools-generic
+    linux-cloud-tools-generic
+make: *** [Makefile:2: xdp] Error 2
+```
+Please install them with
+```bash
+apt install linux-tools-5.4.0-90-generic linux-tools-generic
 ```
 
 Save this image off with `docker commit <running container> ubuntu-working`.
