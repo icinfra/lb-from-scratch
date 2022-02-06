@@ -13,8 +13,8 @@ an `ubuntu` container and adding dependencies so that it can compile the eBPF co
 
 ```bash
 apt update
-apt install clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make 
-apt install linux-tools-generic
+apt install -y clang llvm libelf-dev libpcap-dev gcc-multilib build-essential make 
+apt install -y linux-tools-generic
 ```
 You may see message like below,
 ```bash
